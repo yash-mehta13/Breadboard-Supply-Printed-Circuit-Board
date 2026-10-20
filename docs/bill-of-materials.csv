@@ -1,0 +1,14 @@
+Reference,Qty,Value,Footprint,Description,Datasheet (as set in schematic),Manufacturer,MPN,Supplier,Supplier PN,Populate,Notes
+C1,1,10uF,Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm,Capacitor on switched input rail (/12V) to GND,,,,,,Yes,Dielectric/voltage rating not specified in design. A 10uF part in a 3.0mm disc footprint should be checked for availability
+C2,1,0.1uF,Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm,Capacitor on 5V output of U1 to GND,,,,,,Yes,Voltage rating not specified in design
+C3,1,1uF,Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm,Capacitor between /3.3V and Net-(D1-K) (NOT GND as drawn),,,,,,Yes,See docs/circuit-design.md section 'Issues'. Voltage rating not specified
+D1,1,LED,LED_THT:LED_D5.0mm,5mm through-hole LED,,,,,,Yes,Colour not specified in design (3D render shows red)
+J1;J2,2,Conn_01x02_Pin,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,2-pin 2.54mm header: GND + breadboard rail (J1 = PWR_OUT_BOT; J2 = PWR_OUT_TOP),,,,,,Yes,Pin 1 GND (square pad)
+J3;J4,2,Conn_01x03_Pin,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,3-pin 2.54mm header: pin1 3.3V / pin2 rail output / pin3 5V (J3 = PWR_OUT_BOT; J4 = PWR_OUT_TOP),,,,,,Yes,Rail source chosen by a jumper (jumper not in BOM)
+J5,1,Barrel_Jack_Switch,Connector_BarrelJack:BarrelJack_Horizontal,DC barrel jack with switch contact,,,,,,Yes,Plug size/current rating not specified in design
+J6;J7,2,Screw_Terminal_01x02,TerminalBlock:TerminalBlock_bornier-2_P5.08mm,2-way 5.08mm screw terminal: GND + rail output (J6 = PWR_OUT_BOT; J7 = PWR_OUT_TOP),,,,,,Yes,Pin 1 GND (square pad)
+R1;R2,2,0.33k,Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,Resistor 330 ohm (R1: LM317 OUT-to-ADJ; R2: LED series),,,,,,Yes,Power rating/tolerance not specified
+R3,1,0.56k,Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal,Resistor 560 ohm (between U2 ADJ and Net-(D1-K)),,,,,,Yes,Power rating/tolerance not specified
+S1,1,EG1218,EG1218:SW_EG1218,3-pin slide switch (custom symbol/footprint library),,,,,,Yes,Pin 3 intentionally unconnected. Footprint embedded in PCB; symbol embedded in schematic
+U1,1,LM7805_TO220,Package_TO_SOT_THT:TO-220-3_Vertical,5V fixed linear regulator,https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF,,,,,Yes,Manufacturer/MPN not specified; no heatsink in design
+U2,1,LM317_TO-220,Package_TO_SOT_THT:TO-220-3_Vertical,Adjustable linear regulator (3.3V stage),http://www.ti.com/lit/ds/symlink/lm317.pdf,,,,,Yes,Manufacturer/MPN not specified; no heatsink in design. See circuit issue on ADJ network

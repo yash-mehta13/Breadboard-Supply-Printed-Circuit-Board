@@ -1,0 +1,17 @@
+name: Feature request
+description: Suggest an improvement to the design or documentation
+labels: [enhancement]
+body:
+  - type: textarea
+    id: proposal
+    attributes: {label: Proposed change}
+    validations: {required: true}
+  - type: input
+    id: file
+    attributes: {label: Affected file(s) / reference designators}
+  - type: textarea
+    id: rationale
+    attributes: {label: Rationale and datasheet references}
+  - type: textarea
+    id: verify
+    attributes: {label: How it would be verified}

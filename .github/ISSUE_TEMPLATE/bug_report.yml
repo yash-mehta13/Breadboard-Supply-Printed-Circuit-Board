@@ -1,0 +1,25 @@
+name: Design defect
+description: Report an error in the schematic, PCB, BOM or documentation
+labels: [bug]
+body:
+  - type: input
+    id: file
+    attributes: {label: Affected file, placeholder: PCB_01.kicad_sch}
+    validations: {required: true}
+  - type: input
+    id: ref
+    attributes: {label: Component / reference / net, placeholder: "U2, Net-(U2-ADJ)"}
+  - type: textarea
+    id: expected
+    attributes: {label: Expected behaviour}
+    validations: {required: true}
+  - type: textarea
+    id: observed
+    attributes: {label: Observed behaviour}
+    validations: {required: true}
+  - type: textarea
+    id: steps
+    attributes: {label: Verification steps, description: KiCad version, ERC/DRC output, measurements}
+  - type: textarea
+    id: screenshots
+    attributes: {label: Supporting screenshots / datasheet references}

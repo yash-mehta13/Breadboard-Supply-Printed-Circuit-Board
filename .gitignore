@@ -1,0 +1,30 @@
+# KiCad temporary / generated (native sources PCB_01.kicad_* are kept)
+fp-info-cache
+*-backups/
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_pro-bak
+*-bak
+*.bak
+*.autosave
+_autosave-*
+*.lck
+\#auto_saved_files#
+*.kicad_prl
+*.net
+*.log
+*.rpt
+fp-lib-table.bak
+# Fabrication outputs: generate from KiCad, publish deliberately as a release
+fab/
+gerbers/
+*.gbr
+*.drl
+*.zip
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+kicad-reports/
